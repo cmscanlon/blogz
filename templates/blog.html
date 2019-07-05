@@ -2,37 +2,24 @@
 
 {% block content %}
 
-
-
-    <h1>Build a Blog</h1>
-    <form method='post'>
-        <div>
-        <label>
-            Title: <br>
-            <input type="text" name='title' />
-        </label>
-        </div>
-        <div>
-        <label>
-            New Blog Post: <br>
-            <textarea name='body' rows="10" cols="30"></textarea> </textarea>
-        </label>
-        </div>  
-        <input type="submit" value='Add Entry' />
-    </form>
-
-    <hr />
+    <h1 style="text-align:center">Build A Blog</h1>
 
     {% if posts|length == 0 %}
-    <p> No Blog Post Yet</p>
+    <p> No Posts </p>
     {% else %}
 
-        <ul>
-            {% for title in posts %}
-            <li>{{title}}</li>
-            {% endfor %}
-        </ul>
+        {% for post in posts %}
 
+            <h2 class="post-title">
+                {{ post.blog_title }}
+            </h2>
+            <h2 class="post-body">
+                {{ post.body }}
+            </h2>
+
+        {% endfor %}
+     
     {% endif %}    
 
-{%  endblock %}
+
+{% endblock %}    
