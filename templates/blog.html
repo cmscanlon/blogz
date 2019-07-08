@@ -10,12 +10,18 @@
 
         {% for post in posts %}
 
-            <h2 class="post-title">
+        <div class="blog-nav" id='blog-nav'>
+        <a href="{{ url_for('post', post_id=post.id) }}">
+        </div>
+            <h3 class="post-title">
                 {{ post.blog_title }}
-            </h2>
-            <h2 class="post-body">
+            </h3>
+        </a>  
+            <h4 class="post-body">
                 {{ post.body }}
-            </h2>
+            </h4>
+          
+            <hr>
 
         {% endfor %}
      

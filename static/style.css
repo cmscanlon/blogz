@@ -1,26 +1,75 @@
 * {
-    margin: 0;
+    margin: 5px;
     padding: 0;
-    box-sizing: border-box;  
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+    /* box-sizing: border-box;   */
 }
+/* header {
+    background-image: url(img/notebooks.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    background-attachment: fixed; */
 
 html, body {
     padding: 0;
-    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 150%;
 }
 
 .row {
-    max-width: 1140px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .main-nav {
-    float: right;
     list-style: none;
-    margin-top: 55px;
 }
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px;
 }
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 5px 0;
+    color: #e67e22;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 75%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}  
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+    
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;    
+}
+
+
+/* font-family: 'Dancing Script', cursive;
+
+font-family: 'Mountains of Christmas', cursive;
+
+font-family: 'Shadows Into Light', cursive;
+
+font-family: 'Economica', sans-serif; */
+
+
