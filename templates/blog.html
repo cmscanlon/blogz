@@ -10,9 +10,7 @@
 
         {% for post in posts %}
 
-        <div class="blog-nav" id='blog-nav'>
         <a href="{{ url_for('post', post_id=post.id) }}">
-        </div>
             <h3 class="post-title">
                 {{ post.blog_title }}
             </h3>

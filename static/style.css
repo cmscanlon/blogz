@@ -1,8 +1,9 @@
 * {
-    margin: 5px;
+    margin: 0px;
     padding: 0;
     font-family: 'Shadows Into Light', cursive;
     font-size: 25px;
+    background-color: lightgray;
     /* box-sizing: border-box;   */
 }
 /* header {
@@ -14,6 +15,7 @@
 
 html, body {
     padding: 0;
+    margin: 10px 10px;
 }
 
 h1 {
@@ -34,11 +36,11 @@ h1 {
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 5px 0;
+    padding: 10px 5px;
     color: #e67e22;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 75%;
+    font-size: 60%;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s;
 }
