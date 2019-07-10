@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body style="line-height:2">
+        <h1>Register Your Own Blog</h1>
+        <form action="/signup" method="post">
+            <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Email</label>
+                                <input id="email" type="text" name="email" value='{{email}}'  />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Password</label>
+                                <input type="password" name="password" id="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Verify Password</label> 
+                                <input type="password" name="verify" id="verify" />
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <input type="submit" value="Signup" />
+            </form>
+    </body>
+{% endblock %}
