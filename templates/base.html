@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
+        <title>{{title}}</title>
+        <style type="text/css">
             .error { color: red;}
         </style>
-        <title>{{title}}</title>
+        
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Economica|Mountains+of+Christmas|Shadows+Into+Light&display=swap" rel="stylesheet"> 
     </head>
 <body>
         <header>
-            <nav>
-                <div class="row">
-                    <ul class="main-nav">
-                        <li><a href="/">Main Blog Page</a></li>
-                        <li><a href="/add">Add a Blog Entry</a></li>
-                    </ul>
-                </div>
-                <div style="float:right">
-                    <a href='/logout'>Log Out</a>
-                </div>
-            </nav>
+            <div style='float: right'>
+                {% if 'user' in session %}
+                      {{ session['user'] }}
+                          <form action="/logout" method="post">
+                            <input type="submit" value="Log Out" />
+                          </form>
+                        {% else %}
+                          <a href="login">Login</a> | <a href="signup">Signup</a> | <a href='logout'>Log Out</a>
+                        {% endif %}
+                      </div>
         </header>
 
-    {% with messages = get_flashed_messages(with_categories=True) %}
-            <ul>
-        {% for category,message in messages %}
-                <li class='{{category}}'>{{message}}</li>
-        {% endfor %}
-    {% endwith %}
-            </ul>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
             
     {% block content %}
     {% endblock %}

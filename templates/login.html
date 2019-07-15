@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Log In</h1>
-<p>If you don't have an account, you may <a href="/signup">signup </a> for one.</p>
+
 
     <body style="line-height:2">
             <form action="/login" method="post">
@@ -10,19 +10,20 @@
                     <tbody>
                         <tr>
                             <td>
-                                <label>Email</label>
-                                <input id="email" type="text" name="email" value='{{email}}'  />
+                                <label>Username</label>
+                                <input id="username" type="text" name="username" value='{{username}}'   />
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <label>Password</label>
-                                <input type="password" name="password" id="password" />
+                                <input type="password" name="password" id="password"  />
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <input type="submit" value="Login"/>
             </form>
+            <p>If you don't have an account, you may <a href="/signup">signup </a> for one.</p>
     </body>
 {% endblock %}

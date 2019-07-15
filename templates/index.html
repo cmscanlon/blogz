@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<h1 style="text-align:center">{{all_usernames.username}}</h1>
+
+{% if all_usernames|length == 0 %}
+    <p> No Authors </p>
+    {% else %}
+
+        {% for post in posts %}
+
+        <a href="{{ url_for('post', post_id=post.id) }}">
+            <h3 class="post-title">
+                {{ post.blog_title }}
+            </h3>
+        </a>  
+            <h4 class="post-body">
+                {{ post.body }}
+            </h4>
+          
+            <hr>
+
+        {% endfor %}
+     
+    {% endif %}  
+
+
+
+
+
+
+
+{% endblock%}
