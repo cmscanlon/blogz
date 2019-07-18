@@ -34,13 +34,18 @@ class User(db.Model):
 
 @app.before_request
 def require_login():
-    accepted_routes = ['signup', 'login']
+    accepted_routes = ['index', 'signup', 'login', 'blog']
     if not ('user' in session or request.endpoint in accepted_routes):
         return redirect("/signup")
 
 @app.route('/')
 def index():
     all_usernames = User.query.all()
+    one_user = request.args.get('id')
+    if one_user != None:
+        user = User.query.get(one_user)
+        blog = Blog.query.filter_by(owner_id=one_user)
+        return render_template("one_user.html", user=user, blog=blog)
     return render_template('index.html', title='Home', all_usernames=all_usernames)
 
 @app.route('/blog')
@@ -66,7 +71,7 @@ def login():
 @app.route("/logout", methods=['POST'])
 def logout():
     del session['user']
-    return redirect("/login")      
+    return redirect("/blog")      
 
 @app.route('/signup', methods = ['POST', 'GET'])
 def signup():

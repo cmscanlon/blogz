@@ -1,17 +1,11 @@
 * {
     margin: 0px;
     padding: 0;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 25px;
-    background-color: lightgray;
-    /* box-sizing: border-box;   */
+    font-family: 'Economica', sans-serif;
+    font-size: 30px;
+    background-color: #e8ebfa;
 }
-/* header {
-    background-image: url(img/notebooks.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 20vh;
-    background-attachment: fixed; */
+
 
 html, body {
     padding: 0;
@@ -20,6 +14,26 @@ html, body {
 
 h1 {
     font-size: 150%;
+}
+
+h2 {
+    font-size: 100%;
+}
+
+h3 {
+    font-size: 80%;
+}
+
+h4 {
+    font-size: 65%;
+}
+
+.author {
+    font-size: 65%;
+}
+
+username_list {
+    text-align: center;
 }
 
 .row {
@@ -37,7 +51,7 @@ h1 {
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 10px 5px;
-    color: #e67e22;
+    color: #5680e9;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 60%;
@@ -47,22 +61,27 @@ h1 {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
+    border-bottom: 2px solid #5680e9;
 }  
 
 a:link,
 a:visited {
-    color: #e67e22;
+    color: #5680e9;
     text-decoration: none;
     padding-bottom: 1px;
-    border-bottom: 1px solid #e67e22;
+    border-bottom: 1px solid #5680e9;
     transition: border-bottom 0.2s, color 0.2s;
 }
     
 a:hover,
 a:active {
-    color: #555;
+    color: #8860d0;
     border-bottom: 1px solid transparent;    
+}
+
+.username_list a:hover,
+.username_list a:active {
+    border: none;
 }
 
 
