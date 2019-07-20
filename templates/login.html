@@ -3,28 +3,24 @@
 {% block content %}
 
 <h1>Log In</h1>
-
-
-    <body style="line-height:2">
-            <form action="/login" method="post">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label>Username</label>
-                                <input id="username" type="text" name="username" value='{{username}}'   />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Password</label>
-                                <input type="password" name="password" id="password"  />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input type="submit" value="Login"/>
-            </form>
-            <p>If you don't have an account, you may <a href="/signup">signup </a> for one.</p>
-    </body>
+<form action="/login" method="post">
+    <table class="login">
+        <tbody>
+        <tr>
+            <td>
+                <label>Username</label>
+                <input id="username" type="text" name="username" value='{{username}}'   />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Password</label>
+                <input type="password" name="password" id="password"  />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Login"/>
+</form>
+<p>If you don't have an account, you may <a href="/signup">signup </a> for one.</p>
 {% endblock %}

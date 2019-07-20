@@ -1,19 +1,40 @@
 * {
-    margin: 0px;
+    margin: 2px;
     padding: 0;
     font-family: 'Economica', sans-serif;
     font-size: 30px;
-    background-color: #e8ebfa;
+    /* background-color: #d0d2da; */
+    box-sizing: border-box;
+    
 }
 
+body {
+    
+}
 
-html, body {
+html {
     padding: 0;
-    margin: 10px 10px;
+    margin: 30px 50px;
+    background: url(img/paper.jpeg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   
+}
+header {
+    /* background: url(img/notebooks.jpg) no-repeat center center fixed; */
+    background-size: cover;
+    background-position: top center;
+    height: 20vh;
+    background-attachment: fixed;
+    box-sizing: border-box;
 }
 
 h1 {
     font-size: 150%;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 h2 {
@@ -28,20 +49,39 @@ h4 {
     font-size: 65%;
 }
 
+h5 {
+    font-size: 50%;
+}
+
 .author {
     font-size: 65%;
+}
+
+.post-title, .post-body {
+    text-align: center;
 }
 
 username_list {
     text-align: center;
 }
 
-.row {
-    /* margin: 0 auto; */
-}
+/* Navigation Pieces */
 
 .main-nav {
     list-style: none;
+    text-align: right;
+    text-transform: uppercase;
+    color: #1f4e8b;
+    font-size: 60%;
+}
+
+.user-nav {
+    font-size: 95%;
+    list-style: none;
+    text-align: right;
+    text-transform: uppercase;
+    color: #1f8b50;
+    font-size: 60%;
 }
 
 .main-nav li {
@@ -69,21 +109,35 @@ a:visited {
     color: #5680e9;
     text-decoration: none;
     padding-bottom: 1px;
-    border-bottom: 1px solid #5680e9;
     transition: border-bottom 0.2s, color 0.2s;
+    font-size: 90%;
 }
     
 a:hover,
 a:active {
-    color: #8860d0;
-    border-bottom: 1px solid transparent;    
+    color: #8860d0;  
 }
 
-.username_list a:hover,
-.username_list a:active {
-    border: none;
+/* Login, Add, and Signup Forms */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
 }
 
+/* input[type=text],
+input[type=email], */
+select,
+textarea {
+    width: 90%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px, solid, #ccc;
+}
+
+textarea {
+    height: 100px;
+}
 
 /* font-family: 'Dancing Script', cursive;
 

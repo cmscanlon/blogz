@@ -2,19 +2,10 @@
 
 {% block content%}
 
-<header>
-        <nav>
-            <div class="row">
-                <ul class="main-nav">
-                    <li><a href="/blog">Main Blog Page</a></li>
-                    <li><a href="/add">Add a Blog Entry</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<h1 class="post-title">{{post.blog_title}}</h1>
 
-<h1 style="text-align:center">{{post.blog_title}}</h1>
+<h3 class="post-body">{{ post.body }}</h3>
 
-<h3 style="text-align:center">{{ post.body }}</h3>
+<h5 class="author"> Author: <a href="/?id={{post.owner.id}}">{{post.owner.username}}</a></h5>
 
 {% endblock %}

@@ -1,17 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 style="text-align:center">All Usernames</h1>
+<h1 style="text-align:center">All Authors</h1>
 
 {% if all_usernames|length == 0 %}
     <p> No Authors </p>
     {% else %}
 
         {% for user in all_usernames %}
-        <a href="/?id={{user.id}}">{{user.username}}</a>
-            <h3 class="username_list">
-                <!-- {{ user.username }} -->
-            </h3>
+        <h1><a href="/?id={{user.id}}">{{user.username}}</a></h1>
 
         {% endfor %}
      

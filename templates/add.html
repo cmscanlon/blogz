@@ -2,17 +2,6 @@
 
 {% block content %}
 
-<header>
-        <nav>
-            <div class="row">
-                <ul class="main-nav">
-                    <li><a href="/blog">Main Blog Page</a></li>
-                    <li><a href="/add">Add a Blog Entry</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
     <h1 style="text-align:center">Add a Blog Entry</h1>
     <form action="{{ url_for('newpost') }}" method="post">
         
@@ -25,7 +14,7 @@
             New Blog Post: <br>
             <textarea name="body" id="body" rows="10" cols="30" value="{{ body }}" required ></textarea> 
         </label>
-        <br> 
+         <br>
         <input type="submit" value='Add Entry' />
     </form>
 
