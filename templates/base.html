@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Economica|Mountains+of+Christmas|Shadows+Into+Light&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Economica|Mountains+of+Christmas|Shadows+Into+Light&display=swap" rel="stylesheet">  -->
   </head>
 <body>
     <header>
     <nav>
         {% if 'user' in session %}
-        <ul class="main-nav">
-          <li><a href="/blog">Main Blog Page</a></li>
-          <li><a href="/add">Add a Blog Entry</a></li>
-          <li><a href="/">Home</a></li>
-          <li>{{ session['user'] }}</li>
-          <li><form class="main-nav" action="/logout" method="post"></li>
-          <li><input class="main-nav" type="submit" value="Log Out"/>
-            </form></li>
-          </ul>
+        <!-- <ul class="main-nav"> -->
+          <!-- <li><a href="/blog">Main Blog Page</a></li>
+          <li><a href="/add">Add a Blog Entry</a></li> -->
+          <!-- <li><a href="/">Home</a></li> -->
+          {{ session['user'] }}
+          <form class="main-nav" action="/logout" method="post">
+            <input class="main-nav" type="submit" value="Log Out"/>
+          </form>
+          <!-- </ul> -->
       
+          <button type="button" class="btn btn-success"><a href="/blog">Main Blog Page</a></button> |
+          <button type="button" class="btn btn-warning"><a href="/add">Add a Blog Entry</a></button> |
+          <button type="button" class="btn btn-info"><a href="/">Home</a></button>
+          <!-- <form class="main-nav" action="/logout" method="post">
+          <button type="button" class="btn btn-danger" type="submit" value="Log Out">Log Out</button></form> -->
+              
+          <!-- <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button> -->
+
         {% else %}
-        <a href="/">Home</a> | <a href="login">Login</a> | <a href="signup">Signup</a>
+        <button type="button" class="btn btn-success"><a href="/">Home</a></button> | <button type="button" class="btn btn-warning"><a href="login">Login</a></button> | <button type="button" class="btn btn-info"><a href="signup">Signup</a></button>
         {% endif %}
     </nav>
     </header>
